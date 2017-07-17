@@ -1,0 +1,23 @@
+body {
+	font-family: 'Abril Fatface', cursive;
+	color: #333;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: $main-orange;
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
