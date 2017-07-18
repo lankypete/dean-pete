@@ -22,7 +22,7 @@
   </header>
 
   <div style="height: 100vh" class="placeholder">
-    <p style="text-align: center; position: relative; top: 50%; transform: translateY(-50%);">Sup, playa</p>
+    <p style="text-align: center; position: relative; top: 50%; transform: translateY(-50%);">Sup, playa (php)</p>
   </div>
 
   <footer class="site-footer">
@@ -39,20 +39,6 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
