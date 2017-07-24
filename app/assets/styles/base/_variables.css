@@ -1,4 +1,8 @@
 $w: #fff;
 $b: #000;
-$main-blue: #2f5572;
-$main-orange: #d59541;
+$dark-brown: #050505;
+$light-brown: #645854;
+$grey: #645854; /*link color*/
+$teal: #00F6ED;
+$border-color: rgba($grey, .2);
+$link-active: #645854;

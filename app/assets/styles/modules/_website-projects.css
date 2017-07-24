@@ -1,0 +1,81 @@
+.website-projects {
+	
+	padding-bottom: 5rem;
+
+	&__project {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		margin-top: 50px;
+		border: solid $border-color;
+		opacity: 1;
+		transition: all .3s ease-out;
+		overflow: hidden;
+
+		@mixin al {
+			$prog-width: 400px;
+			$prog-height: calc($prog-width / 1.6);
+			width: $prog-width;
+			height: $prog-height;
+		}
+
+		&--coming-soon {
+			$prog-width: 400px;
+			$prog-height: calc($prog-width / 1.6);
+			width: $prog-width;
+			height: $prog-height;
+			background-color: rgba($dark-brown, .7);
+			border: solid rgba($w, .5);
+
+			p {
+				opacity: 1 !important;
+			}
+
+		}
+
+		img {	
+			display: block;
+			opacity: 1;
+			transition: all .3s ease-out;			
+		}
+
+		p {
+			font-size: 1.8rem;
+			color: $w;
+			text-shadow: -1px 1px 4px rgba($light-brown, 1);
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			top: 50%;
+			opacity: 0;
+			transform: translatey(-125%);
+			transition: all .3s ease-out;
+
+			&.smaller {
+				font-size: 1.4rem;
+			}
+		}
+
+		&:hover {
+			background-color: rgba($light-brown, .7);
+			border: solid rgba($w, .5);
+			
+
+			img {
+				opacity: .2;
+				transform: scale(1.05);
+				
+			}
+
+			p {
+				opacity: 1;
+			}
+
+		}
+		
+	}
+
+
+
+}

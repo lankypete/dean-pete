@@ -1,0 +1,36 @@
+.wrapper {
+
+	overflow: hidden;
+	margin: 0 auto;
+	width: 95%;
+
+	@mixin as {
+		max-width: 575px;
+	}
+
+	@mixin am {
+		width: 100%;
+		max-width: 880px;
+	}
+	
+	@mixin al {
+		width: 100%;
+		max-width: 1200px;
+	}
+
+	&--narrow {
+		@mixin as {
+			max-width: 450px;
+		}
+
+		@mixin am {
+			width: 100%;
+			max-width: 880px;
+		}
+		
+		@mixin al {
+			width: 100%;
+			max-width: 900px;
+		}
+	}
+}

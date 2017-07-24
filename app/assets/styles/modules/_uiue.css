@@ -1,0 +1,67 @@
+$metal: #CAD8DE;
+
+.uiue {
+
+	font-size: 1.3rem;
+	margin-top: 3em;
+	margin-bottom: 3em;
+
+	hr {
+		margin: 2em 0;
+	}
+
+
+	p {
+		line-height: 1.5;
+		margin: .5em 0;
+
+		&.centered {
+			text-align: center;
+		}
+	}
+
+	&__photo {
+		overflow: hidden;
+		border-radius: 20px;
+		border: solid $metal;
+		display: block;
+		margin: 50px auto;
+		width: 100%;
+		max-width: 600px;
+
+		img {
+			display: block;
+		}
+
+	}
+
+	&__photo--visual-art {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	&__photo--logos {
+		border: 1px solid black;
+		margin-top: 2em;
+	}
+
+	&__tech-name {
+		font-size: 1.5rem;
+	}
+
+	&__section-title {
+		text-align: center;
+		font-size: 1.5rem;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+		}
+
+	}
+
+}

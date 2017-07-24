@@ -23,3 +23,12 @@
 		display: table;
 	}
 }
+
+@define-mixin link-colors {
+	color: rgba($grey, .8);
+	transition: all .15s ease-out;
+	text-decoration: none;
+	&:hover {
+		color: $link-active;
+	}
+}

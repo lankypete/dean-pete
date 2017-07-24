@@ -10342,10 +10342,20 @@ var _DavidLazyLoad = __webpack_require__(4);
 
 var _DavidLazyLoad2 = _interopRequireDefault(_DavidLazyLoad);
 
+var _ContactFooter = __webpack_require__(5);
+
+var _ContactFooter2 = _interopRequireDefault(_ContactFooter);
+
+var _Nav = __webpack_require__(6);
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 new _RevealOnScroll2.default((0, _jquery2.default)(".site-footer"), "100%");
 var davidLazyLoad = new _DavidLazyLoad2.default();
+var contactFooter = new _ContactFooter2.default();
+var nav = new _Nav2.default();
 
 /***/ }),
 /* 2 */
@@ -11215,6 +11225,130 @@ var DavidLazyLoad = function () {
 }();
 
 exports.default = DavidLazyLoad;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ContactFooter = function () {
+	function ContactFooter() {
+		_classCallCheck(this, ContactFooter);
+
+		this.contactButton = (0, _jquery2.default)('.site-footer__contact-button');
+		this.siteFooter = (0, _jquery2.default)('.site-footer');
+		this.closeButton = (0, _jquery2.default)('.site-footer__close-button');
+		this.events();
+	}
+
+	_createClass(ContactFooter, [{
+		key: 'events',
+		value: function events() {
+			this.contactButton.click(this.toggleFooter.bind(this));
+			this.closeButton.click(this.closeFooter.bind(this));
+		}
+	}, {
+		key: 'toggleFooter',
+		value: function toggleFooter() {
+			this.siteFooter.toggleClass('site-footer--expanded');
+		}
+	}, {
+		key: 'closeFooter',
+		value: function closeFooter() {
+			this.siteFooter.removeClass('site-footer--expanded');
+		}
+	}]);
+
+	return ContactFooter;
+}();
+
+exports.default = ContactFooter;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Nav = function () {
+	function Nav() {
+		_classCallCheck(this, Nav);
+
+		this.nav = (0, _jquery2.default)(".site-header");
+		this.path = window.location.pathname.split('/');
+		this.submenu = this.path[1];
+		this.submenuSelector = (0, _jquery2.default)('[data-submenu-name="' + this.submenu + '"]');
+		this.page = this.path.pop();
+		this.pageSelector = (0, _jquery2.default)('[data-link="' + this.page + '"]');
+		this.pathValueLog();
+		this.addSubmenu();
+		this.addActiveClass();
+	}
+
+	//find out which menu to dropdown
+
+
+	_createClass(Nav, [{
+		key: "addSubmenu",
+		value: function addSubmenu() {
+			this.nav.addClass("site-header--" + this.submenu + "-visible");
+		}
+
+		//highlight the current active link
+
+	}, {
+		key: "addActiveClass",
+		value: function addActiveClass() {
+			if (this.submenu == 'index.php' | this.submenu == '') this.submenuSelector = (0, _jquery2.default)('[data-submenu-name="websites"]');;
+			this.submenuSelector.addClass('active');
+			this.pageSelector.addClass('active');
+		}
+	}, {
+		key: "pathValueLog",
+		value: function pathValueLog() {
+			console.log(this.path);
+			console.log(this.submenu);
+			console.log(this.submenuSelector);
+			console.log(this.page);
+			//$(this.submenuSelector).css('background-color','red');
+		}
+	}]);
+
+	return Nav;
+}();
+
+exports.default = Nav;
 
 /***/ })
 /******/ ]);

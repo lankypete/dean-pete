@@ -7,14 +7,15 @@ nested = require("postcss-nested"),
 inherit = require("postcss-inherit"),
 cssImport = require("postcss-import"),
 mixins = require("postcss-mixins"),
+math = require("postcss-automath"),
 hexrgba = require("postcss-hexrgba");
 
 //the styles task pipes all css modules, and base files, and all into postcss, 
 //and then to the final stylesheet inside the temp folder
 //(called from gulp cssInject dependancies)
-gulp.task('styles', function() {
+gulp.task('styles', function() { 
 	return gulp.src('./app/assets/styles/styles.css')
-		.pipe(postcss([cssImport, inherit, mixins, nested, cssvars, hexrgba, autoprefixer]))
+		.pipe(postcss([cssImport, math, inherit, mixins, nested, cssvars, hexrgba, autoprefixer]))
 		.on('error', function(errorInfo){ //so that gulp tasks don't quit on accidental css error
 			console.log(errorInfo.toString());
 			this.emit('end');

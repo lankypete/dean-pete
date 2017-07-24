@@ -1,0 +1,24 @@
+$gutters: 50px;
+
+.row {
+	@mixin clearfix;
+
+	&--gutters {
+
+		margin-right: -$gutters;
+
+		> div {
+			padding-right: $gutters;
+		}
+
+	}
+
+	&__2-col-m {
+
+		@mixin am {
+			float: left;
+			width: 50%;
+		}
+
+	}
+}

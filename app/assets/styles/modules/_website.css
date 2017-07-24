@@ -1,0 +1,62 @@
+.website {
+
+	font-size: 1.3rem;
+	margin-top: 3em;
+	margin-bottom: 3em;
+
+	hr {
+		margin: 2em 0;
+	}
+
+
+	p {
+		line-height: 1.5;
+		margin: .5em 0;
+
+		&.centered {
+			text-align: center;
+		}
+	}
+
+	&__photo {
+		border: solid $border-color;
+		display: block;
+		margin: 50px auto;
+		width: 100%;
+		max-width: 600px;
+		overflow: hidden;
+
+		img {
+			display: block;
+
+			transition: all .3s ease-out;
+			&:hover {
+				transform: scale(1.02);
+			}
+		}
+
+		
+
+	}
+
+	&__tech-name {
+		font-size: 1.5rem;
+	}
+
+	&__section-title {
+		text-align: center;
+		font-size: 1.5rem;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+		}
+
+	}
+
+	
+}

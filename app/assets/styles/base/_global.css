@@ -1,6 +1,7 @@
 body {
-	font-family: courier;
+	font-family: 'Abril Fatface', cursive;
 	color: #333;
+	position: relative;
 }
 
 img {
@@ -13,7 +14,7 @@ img {
 }
 
 a {
-	color: $main-orange;
+	color: $b;
 }
 
 ul, ol {
