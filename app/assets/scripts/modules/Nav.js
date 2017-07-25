@@ -21,16 +21,17 @@ class Nav {
 
 	//highlight the current active link
 	addActiveClass() {
-		if (this.submenu == 'index.php' | this.submenu == '') this.submenuSelector = $('[data-submenu-name="websites"]');;
+		if (this.submenu == 'index.php' | this.submenu == '') this.submenuSelector = $('[data-submenu-name="websites"]');
+		if (this.submenu == 'more.php') this.submenuSelector = $('[data-submenu-name="more"]');
 		this.submenuSelector.addClass('active');
 		this.pageSelector.addClass('active');
 	}
 
 	pathValueLog() {
-		console.log(this.path);
-		console.log(this.submenu);
-		console.log(this.submenuSelector);
-		console.log(this.page);
+		// console.log(this.path);
+		// console.log(this.submenu);
+		// console.log(this.submenuSelector);
+		// console.log(this.page);
 		//$(this.submenuSelector).css('background-color','red');
 	}
 

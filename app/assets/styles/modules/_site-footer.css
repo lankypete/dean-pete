@@ -48,8 +48,11 @@
 		}
 
 		.site-footer__close-button {
-			display: block;
-			opacity: 1;
+			@mixin al {
+				display: block;
+				opacity: 1;
+			}
+			
 		}
 
 		.site-footer__contact-info {

@@ -11330,7 +11330,8 @@ var Nav = function () {
 	}, {
 		key: "addActiveClass",
 		value: function addActiveClass() {
-			if (this.submenu == 'index.php' | this.submenu == '') this.submenuSelector = (0, _jquery2.default)('[data-submenu-name="websites"]');;
+			if (this.submenu == 'index.php' | this.submenu == '') this.submenuSelector = (0, _jquery2.default)('[data-submenu-name="websites"]');
+			if (this.submenu == 'more.php') this.submenuSelector = (0, _jquery2.default)('[data-submenu-name="more"]');
 			this.submenuSelector.addClass('active');
 			this.pageSelector.addClass('active');
 		}

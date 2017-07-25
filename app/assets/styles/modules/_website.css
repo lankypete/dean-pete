@@ -1,8 +1,15 @@
 .website {
+	font-size: .9rem;
+	text-align: center;
 
-	font-size: 1.3rem;
-	margin-top: 3em;
-	margin-bottom: 3em;
+
+	@mixin am {
+		text-align: left;
+		font-size: 1.3rem;
+		margin-top: 3em;
+		margin-bottom: 3em;
+	}
+	
 
 	hr {
 		margin: 2em 0;
@@ -40,12 +47,22 @@
 	}
 
 	&__tech-name {
-		font-size: 1.5rem;
+		font-size: 1.1rem;
+
+		@mixin am {
+			font-size: 1.5rem;
+		}
+		
 	}
 
 	&__section-title {
 		text-align: center;
-		font-size: 1.5rem;
+		font-size: 1.3rem;
+
+		@mixin am {
+			font-size: 1.5rem;
+		}
+		
 
 		a {
 			text-decoration: none;
@@ -55,6 +72,13 @@
 			}
 
 		}
+
+	}
+
+	&__see-site {
+		margin-top: 50px;
+		width: 100%;
+		text-align: center;
 
 	}
 

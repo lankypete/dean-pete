@@ -7,11 +7,14 @@
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
-		margin-top: 50px;
 		border: solid $border-color;
 		opacity: 1;
 		transition: all .3s ease-out;
 		overflow: hidden;
+
+		@mixin am {
+			margin-top: 50px;
+		}
 
 		@mixin al {
 			$prog-width: 400px;
@@ -21,10 +24,20 @@
 		}
 
 		&--coming-soon {
+
 			$prog-width: 400px;
 			$prog-height: calc($prog-width / 1.6);
-			width: $prog-width;
-			height: $prog-height;
+			width: 100%;
+			height: 200px;
+			/*height: $prog-height;*/
+
+			@mixin am {
+				$prog-width: 400px;
+				$prog-height: calc($prog-width / 1.6);
+				width: $prog-width;
+				height: $prog-height;
+			}
+
 			background-color: rgba($dark-brown, .7);
 			border: solid rgba($w, .5);
 
@@ -74,6 +87,15 @@
 
 		}
 		
+	}
+
+	&__mobile-name {
+		margin-top: 2em;
+		text-align: center;
+
+		@mixin am {
+			display: none;
+		}
 	}
 
 

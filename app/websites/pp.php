@@ -11,7 +11,7 @@
 				Introducing Pete Progr.  &nbspMy original coding pseudonym.  &nbsppeteprogr.zone is a site build from scratch. &nbspFrom this point of view, it's kind of like a portfolio inside a portfolio.  &nbspIt features a few of the first coding challenges I went through.  &nbspThey all involve an API of some sort.
 			</p>
 			<div class="website__photo">
-				<a href="http://peteprogr.zone/" target="blank"><img srcset="/assets/images/peteprogrscreenshot.png" alt="The pete progr homepage"></a>
+				<a href="http://peteprogr.zone/" target="blank"><img srcset="/assets/images/peteprogrscreenshot-opt.jpg" alt="The pete progr homepage"></a>
 			</div>
 			
 
@@ -21,7 +21,13 @@
 			<p class="centered"><span class="website__tech-name">SASS - </span>Used as the CSS preprocessor.</p>
 			<p class="centered"><span class="website__tech-name">jQuery - </span>Lots and lots of jQuery.  </p>
 			<p class="centered"><span class="website__tech-name">More - </span>Go see the site for a more specific list of development resources used</p>
+
+			<div class="website__see-site">
+				The site is right <a  href="http://peteprogr.zone/" target="blank">Here</a>
+			</div>
+
 			<hr>
+
 		</div>
 	</div>
 

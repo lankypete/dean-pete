@@ -2,7 +2,7 @@
     <h1 class="site-header__name"><a href="/index.php">Dean Pete</a></h1>
     <ul class="site-header__nav">
       <li>
-      	<a data-submenu-name="websites" href="http://localhost:3000/">Websites</a>
+      	<a data-submenu-name="websites" href="<?php home_url("");?>">Websites</a>
       	<div>
       		<ul class="site-header__website-nav">
       			<li><a data-link="ifbr.php" href="<?php home_url("websites/ifbr.php");?>">islandfishingboatrentals.ca</a></li>
@@ -11,6 +11,6 @@
       		</ul>
       	</div>
       </li>
-      <li><a data-submenu-name="more.php" href="<?php home_url("more.php") ?>">More</a></li>
+      <li><a data-submenu-name="more" href="<?php home_url("more.php") ?>">More</a></li>
     </ul>
   </header>
